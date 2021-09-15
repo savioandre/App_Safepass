@@ -1,0 +1,147 @@
+:root {
+
+    /* length */
+    --S_fat_tx: 4.2rem;
+    --S_fat_title: 5.4rem;
+    --S_open: 3.2rem;
+    --C_tittle: 4.0rem;
+
+    /* Fonts */
+    --h1: calc(1vw + 3.5rem - 1px);
+    --h2: calc(1vw + 2.2rem - 1px);
+    --line_a: calc(1.5vh + 4.5rem + 2px);
+    --Pop: 'Poppins', sans-serif;
+
+    /* Efects */
+    --str: saturate(1);
+
+    /* Colors */
+    --b_: #2A314F;
+    --blue: #9AB3DA;
+    --blue_ligth: #E7ECF3; 
+    --blue_spot: #0045FF;   
+    --blue_dark: #6082C2;
+    --blue_black: rgb(64, 75, 124);
+    --back: #f4f4f4;
+    --type: #404B7C;
+    --fill: #fff;
+    --shadow: rgb(64 75 124 / 15%);
+    --red: #F68D88;
+    --red-hov: #f6625a;
+    /* --body: #e8ebff; */
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    /* --fill: #040910; */
+    --fill: #f1f1f1;
+    --type: #c9d1d9;
+    --back: #0b0c14;
+    --b_: #f1f1f1;
+    --dark_type_p: #344aad;
+    --shadow: rgba(0, 0, 0, 0.2);
+
+    /* Img */
+    --str: saturate(2);
+}
+
+/* Geral */
+html {
+    font-size: 62.5%;
+}
+
+html body {
+    background: var(--back);
+    font-family: var(--Pop);
+}
+
+h1 {
+    font-family: var(--Pop);
+    font-weight: 800;
+}
+
+::placeholder {
+    font-family: var(--Pop);
+}
+/* Geral */
+
+/* Header rules Js */
+.header {
+    z-index: 25;
+    width: 100%;
+    background: var(--back);
+}
+
+.testes {
+    position: fixed;
+}
+  
+  .anima {
+    animation: anima ease-in-out 5s;
+}
+
+img {
+    filter: var(--str);
+  }
+/* Header rules Js */
+
+/* Rules Pricing */
+@media (max-width: 1300px) {
+    .cards {
+        flex-direction: column;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 450px) {
+    .C_plan {
+        width: 100%;
+    }
+
+    .txt_c {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 1150px) {
+    .dt_cards {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 1160px) {
+    .init {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 48px;
+    }
+
+    .name_f {
+        top: 0;
+    }
+}
+
+@media (max-width: 610px) {
+    .F_nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .dt_c {
+        width: 100%;
+    }
+}
+
+/* Dark Mode */
+#dark {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: #344aad;
+}
+/* Dark Mode */
