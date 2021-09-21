@@ -55,6 +55,22 @@
     height: 100%;
 }
 
+.back .tmr {
+    margin-right: 4px;
+}
+
+footer {
+    position: absolute;
+    bottom: 16px;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+p.footer {
+    color: var(--type);
+}
+
 @media (max-width: 700px) {
     .layout {
         width: 100%;
