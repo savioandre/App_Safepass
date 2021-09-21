@@ -122,12 +122,12 @@ nav {
 }
 
 .try {
-    background: var(--blue_black);
+    background: rgba(64, 75, 124, 0.9);
     margin-right: 12px;
 }
 
 .read {
-    background: var(--b_);
+    background: rgba(52, 74, 173, 0.9);
     margin-left: 12px;    
 }
 
@@ -142,11 +142,11 @@ nav {
 
 /* Hover */
 .read:hover {
-    background: hsl(229, 32%, 27%);
+    background: rgba(52, 74, 173, 1);
 }
 
 .try:hover {
-    background: hsl(229, 34%, 31%);
+    background: rgba(64, 75, 124, 1);
 }
 
 .Sign:hover {
@@ -339,12 +339,6 @@ nav {
     }
 }
 
-.i_se {
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
 @media (max-width: 670px) {
     html {
         font-size: 58%;
@@ -356,3 +350,7 @@ nav {
         width: auto;
     }
 }
+
+/* Companys */
+
+/* Companys */

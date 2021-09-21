@@ -1,7 +1,7 @@
 // Insert Header
 const header = document.querySelector('#header')
 header.innerHTML = `<nav class="bar_nav_">
-    <div class="logo">
+    <a href="./index.html" class="logo">
         <svg width="32" height="45" viewBox="0 0 32 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M31 35V6.95L16 2L1 6.95V35L16.4286 43.25L31 35Z" fill="#D1DCED" stroke="#9AB3DA"
                 stroke-width="2" />
@@ -14,7 +14,7 @@ header.innerHTML = `<nav class="bar_nav_">
                 fill="#9AB3DA" />
         </svg>
 
-    </div>
+    </a>
 
     <ul class="Bar">
         <li>
@@ -104,26 +104,3 @@ btn_mobile.addEventListener('click', () => {
     }
     
 })
-
-
-//Dark Mode
-const themeToggle = document.querySelector('#dark input')
-const currentTheme = localStorage.getItem("theme");
-
-if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "dark") {
-        themeToggle.checked = true;
-    }
-}
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
-    }
-}
-
-themeToggle.addEventListener('click', switchTheme, false);

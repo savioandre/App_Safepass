@@ -82,6 +82,7 @@ form input {
 
 .o {
     color: #fff;
+    font-family: var(--Pop);
 }
 
 .bt_login {
@@ -130,7 +131,7 @@ form input {
 
 /* Img bg */
 .bg_login {
-    background: #D1DCED;
+    background: #f1f1f1;
     height: 100%;
     display: flex;
     align-items: center;
