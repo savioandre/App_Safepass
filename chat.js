@@ -99,6 +99,7 @@ pricing.addEventListener('click', () => {
         </div>`
 
     message.innerHTML = inner;
+<<<<<<< HEAD
 })
 
 // Loader
@@ -111,3 +112,6 @@ function refresh() {
 }
 
 window.onload = refresh;
+=======
+})
+>>>>>>> 5f28ab5b37877786f96ff0c8e86110fc73b59c0d

@@ -31,9 +31,12 @@
     --box: #f1f1f1;
     --txt_opt: #707070;
 
+<<<<<<< HEAD
     --btn: #232943;
     --btn-hover: hsl(229, 31%, 26%);
     
+=======
+>>>>>>> 5f28ab5b37877786f96ff0c8e86110fc73b59c0d
     --shadow: rgb(64 75 124 / 15%);
     --red: #F68D88;
     --red-hov: #f6625a;
@@ -271,6 +274,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 0;
+<<<<<<< HEAD
 }
 
 .close_chat {
@@ -317,6 +321,54 @@ img {
     gap: 8px;
 }
 
+=======
+}
+
+.close_chat {
+    height: 20px;
+    cursor: pointer;
+}
+
+.tittle_chat {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.txt_chat {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.opt_img {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.img_c {
+    height: 24px;
+}
+
+/* Main */
+.main_chat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    padding: 12px;
+    width: 400px;
+    height: 488px;
+    overflow: auto;
+}
+
+.chat_m {
+    display: flex;
+    align-items: inherit;
+    gap: 8px;
+}
+
+>>>>>>> 5f28ab5b37877786f96ff0c8e86110fc73b59c0d
 .message {
     display: flex;
     align-self: flex-end;
