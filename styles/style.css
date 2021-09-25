@@ -34,7 +34,7 @@ nav {
 
 .a {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--type);
 }
 
@@ -65,7 +65,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 100vh;
+    height: 80vh;
 }
 
 .tittle {
@@ -122,8 +122,12 @@ nav {
 }
 
 .try {
-    background: rgba(64, 75, 124, 0.9);
+    background: var(--btn);
     margin-right: 12px;
+}
+
+.tr-efc {
+    transition: all 0.3s ease-in-out;
 }
 
 .read {
@@ -146,7 +150,7 @@ nav {
 }
 
 .try:hover {
-    background: rgba(64, 75, 124, 1);
+    background: var(--btn-hover);
 }
 
 .Sign:hover {
@@ -212,7 +216,6 @@ nav {
     font-size: 1.6rem;
     color: var(--blue_dark);
 }
-
 
 /***** Layout 2 *****/
 
@@ -352,5 +355,72 @@ nav {
 }
 
 /* Companys */
+.companys {
+    align-self: center;
+    text-align: center;
+}
 
+.conp_log_title {
+    color: var(--b_);
+    font-size: var(--h2);
+    margin-bottom: 8px;
+}
+
+.company_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 8px;
+}
+
+.company_logo img {
+    height: 25px;
+}
+
+.img_filter {
+    filter: saturate(0);
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+
+.img_filter:hover {
+    filter: saturate(1);
+    opacity: 1;
+}
+
+[data-theme = "dark"] .a_img {
+    filter: invert(1);
+    opacity: 0.3;
+}
+
+[data-theme = "dark"] .a_img:hover {
+    filter: invert(1);
+    opacity: 1;
+} 
 /* Companys */
+
+.loader {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--back);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    cursor: progress;
+}
+
+.h1_loader {
+    font-weight: 300;
+    font-size: var(--h2);
+}
+
+.loader.test {
+    display: none;
+    z-index: -2;
+}

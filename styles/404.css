@@ -59,6 +59,10 @@
     margin-right: 4px;
 }
 
+.abt {
+    color: var(--blue_dark);
+}
+
 footer {
     position: absolute;
     bottom: 16px;

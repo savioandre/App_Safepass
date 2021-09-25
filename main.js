@@ -48,7 +48,7 @@ header.innerHTML = `<nav class="bar_nav_">
 
         <li><a class="a" href="/pricing.html">Pricing</a></li>
 
-        <li><a class="a" href="">About Us</a></li>
+        <li><a class="a" href="./about.html">About Us</a></li>
     </ul>
 
     <div class="actions">

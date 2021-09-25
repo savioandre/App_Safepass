@@ -81,7 +81,7 @@ form {
 }
 
 .bt_login {
-    background: hsl(229, 26%, 49%);
+    background: #404B7C;
     height: 60px;
     width: 170px;
 
@@ -92,7 +92,7 @@ form {
 }
 
 .bt_login:hover {
-    background: #404B7C;
+    background: var(--btn-hover);
 }
 
 .tittle_login h1 {

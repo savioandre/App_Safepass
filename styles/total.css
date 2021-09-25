@@ -31,6 +31,9 @@
     --box: #f1f1f1;
     --txt_opt: #707070;
 
+    --btn: #232943;
+    --btn-hover: hsl(229, 31%, 26%);
+    
     --shadow: rgb(64 75 124 / 15%);
     --red: #F68D88;
     --red-hov: #f6625a;

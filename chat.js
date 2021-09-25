@@ -100,3 +100,14 @@ pricing.addEventListener('click', () => {
 
     message.innerHTML = inner;
 })
+
+// Loader
+function loader() {
+    document.querySelector('.loader').classList.add('test')
+}
+
+function refresh() {
+    setInterval(loader, 3000);
+}
+
+window.onload = refresh;
