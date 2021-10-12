@@ -13,11 +13,11 @@ chat.addEventListener('click', () => {
     addEventListener('click', chekcLength)
 })
 
-const testeP = document.querySelector('.chat_res')
-efImgInput.addEventListener('click', () => {
-    let nome = chekcLength.value
-    testeP.innerHTML = nome
-});
+// const testeP = document.querySelector('.chat_res')
+// efImgInput.addEventListener('click', () => {
+//     const nome = chekcLength.value
+//     testeP.innerHTML = nome
+// });
 // function check() {
 //     if (chekcLength.value.length > 1) {
 //         efImgInput.classList.add('lu-mode-selec')
@@ -26,37 +26,46 @@ efImgInput.addEventListener('click', () => {
 //         efImgInput.classList.remove('lu-mode-selec')
 //     }
 // }
+const form = document.querySelector('.form_Input')
+const btn = document.querySelector('.btn_sub_input')
+const input = document.querySelector('.m_help')
 
-const form = document.querySelector('.form_Input');
-const btn = document.querySelector('.btn_sub_input');
+
+btn.addEventListener('click', () => {
+    if(input.value.length <= 0) {
+        input.value.length = " "
+    } else {
+    const main = document.querySelector('.message')
+    const div = `
+        <div class="res_chat">
+            <div class="chat_send mes">
+                <p class="chat_res"></p>
+            </div>
+        </div>` 
+    main.innerHTML = div
+
+    //insert Screen
+    const p = document.querySelector('.m_help').value
+    const sendMessage = document.querySelector('.chat_res')
+    sendMessage.innerHTML = p
+
+    btn.setAttribute("type", "reset")
+    }
+})
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-});
+    });
 
-const DOM = {
-    addMessage(one, index) {
-        const divInner = document.createElement('div')
-        divInner.classList.add('message')
-        divInner.innerHTML = DOM.innerMessage(one)
-
-        console.log(divInner)
-    },
-    innerMessage(one) {
-        const message = `
-        <div class="res_chat">
-            <div class="chat_send mes">
-                <p class="chat_res">
-                    Hi there! How can i help you?
-                </p>
-            </div>
-        </div>
-        `
-        return message
+document.addEventListener("keypress", function(e) {
+    if(e.key === 'Enter') {
+    
+    let KeyP = btn
+    KeyP.click();
+    
     }
-}
+  });
 
-// Clo O
 const open = document.querySelector('.chat_img')
 const img = document.querySelector('.chat_meet')
 
@@ -74,6 +83,7 @@ close.addEventListener('click', () => {
 
 const pricing = document.querySelector('.opt_pri')
 const message = document.querySelector('.message')
+
 pricing.addEventListener('click', () => {
 
     const inner = `
@@ -99,10 +109,8 @@ pricing.addEventListener('click', () => {
         </div>`
 
     message.innerHTML = inner;
-<<<<<<< HEAD
 })
 
-// Loader
 function loader() {
     document.querySelector('.loader').classList.add('test')
 }
@@ -112,6 +120,3 @@ function refresh() {
 }
 
 window.onload = refresh;
-=======
-})
->>>>>>> 5f28ab5b37877786f96ff0c8e86110fc73b59c0d

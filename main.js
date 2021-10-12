@@ -18,7 +18,7 @@ header.innerHTML = `<nav class="bar_nav_">
 
     <ul class="Bar">
         <li>
-            <a class="a" href="">Solutions
+            <a class="a" href="./">Solutions
                 <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
                         stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
@@ -44,7 +44,7 @@ header.innerHTML = `<nav class="bar_nav_">
             </a>
         </li>
 
-        <li><a class="a" href="">Security</a></li>
+        <li><a class="a" href="./security.html">Security</a></li>
 
         <li><a class="a" href="/pricing.html">Pricing</a></li>
 
