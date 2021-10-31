@@ -96,6 +96,11 @@ form input {
     cursor: pointer;
 }
 
+.dis_btn {
+    opacity: 0.6;
+    cursor: no-drop;
+}
+
 .bt_login:hover {
     background: var(--btn-hover);
 }
@@ -224,6 +229,21 @@ form {
     border: 1px solid #9AB3DA;
     border-radius: 5px;
     background: #f4f4f4;
+    outline: none;
+}
+
+.rd_::placeholder {
+    color: red;
+}
+
+.req_area {
+    opacity: 0; 
+}
+
+.act-req {
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+    color: red;
 }
 
 .n_s {
@@ -242,4 +262,32 @@ form {
 
 label span {
     color: #6082C2;
+}
+
+.view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.view p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--type);
+}
+
+.sv_ba {
+    background: rgba(64, 75, 124, 0.40);
+    height: 6px;
+    width: 130px;
+    border-radius: 10px;
+    padding: 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sy_ba {
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
 }

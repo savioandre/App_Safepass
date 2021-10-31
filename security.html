@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Links -->
-        <link rel="stylesheet" href="/styles/style.css">
-        <link rel="stylesheet" href="/styles/security.css">
-        <link rel="stylesheet" href="/styles/total.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/security.css">
+        <link rel="stylesheet" href="./styles/total.css">
         <link rel="stylesheet" href="./styles/header.css">
         <link rel="stylesheet" href="./styles/footer.css">
     
@@ -23,7 +23,30 @@
     </head>
 <body>
     <header class="header" id="header"></header>
-    <section class="layout">
+    <div class="inject">
+        <div class="img_ma">
+            <img src="./image/Dashboard.png" class="img-bar">
+        </div>
+        <ul class="ma_ul">
+            <li class="ma_li">
+                <a class="a" href="">Busnisses</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">Cloud</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">Cripto</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">Scan</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">Backup</a>
+            </li>
+        </ul>
+    </div>
+    
+    <section class="layout b-b">
         <div class="encry theme">
             <div class="encry_txt tittle">
                 <h2 class="theme_cr">
@@ -43,12 +66,12 @@
                 </div>
             </div>
 
-            <div class="compu_img">
+            <div class="compu_img img_width">
                 <img src="./image/Security/Security/Security.svg" alt="Security SafePass Criptografia" class="i_se">
             </div>
         </div>
 
-        <div class="solutions">
+        <div class="solutions_box">
             <div class="sol_m_i">
                 <div class="sol_m_i_scan i_sol_content">
                     <div class="to_i_m">
@@ -111,6 +134,43 @@
                 </div>
             </div>
         </div>
+
+        <div class="bar_mobile">
+            <ul class="Bar_active">
+                    <li class="sol-opt">
+                        <a class="txt_mobile a">Solutions
+                            <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
+                                    stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+            
+                    <li class="res-opt">
+                        <a class="txt_mobile a">Resources
+                            <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
+                                    stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+            
+                    <li class="com-opt">
+                        <a class="txt_mobile a">Company
+                            <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
+                                    stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+            
+                    <li><a class="txt_mobile a" href="./security.html">Security</a></li>
+            
+                    <li><a class="txt_mobile a" href="/pricing.html">Pricing</a></li>
+            
+                    <li><a class="txt_mobile a" href="./about.html">About Us</a></li>
+            </ul>
+        </div> 
 
         <footer class="footer">
             <section class="init">
@@ -199,9 +259,19 @@
                 <p class="footer_desc li_fo"><a href="">Pack Illustrations</a></p>
             </div>
         </footer>
+
+        <div class="loader">
+            <svg width="178" height="171" viewBox="0 0 178 171" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M164.725 115.912C172.106 96.647 172.229 75.3549 165.07 56.0059L144.177 76.5625C145.714 86.6832 144.624 97.1019 140.913 106.788C135.746 120.274 125.85 131.42 113.072 138.148C100.293 144.876 85.5039 146.727 71.4614 143.356C57.4189 139.985 45.0818 131.621 36.7506 119.825C28.4194 108.029 24.6628 93.6052 26.1813 79.2437C27.6998 64.8822 34.3897 51.5632 45.0036 41.7701C55.6174 31.9771 69.4308 26.3785 83.8678 26.0184C98.3049 25.6583 111.38 29.5612 122.469 38.8129L140.805 21.2327C124.964 8.01603 103.856 0.0118749 83.2319 0.526323C62.6076 1.04077 42.8743 9.0387 27.7116 23.0288C12.5489 37.0188 2.99193 56.046 0.822674 76.5625C-1.34658 97.0789 4.01999 117.684 15.9217 134.536C27.8234 151.387 45.4478 163.335 65.5085 168.151C85.5693 172.967 106.697 170.323 124.952 160.712C143.207 151.1 157.343 135.177 164.725 115.912Z" fill="#404B7C" class="svg-elem-1"></path>
+                <path d="M46.0997 67.836L85.8107 106.547L166.073 26.2849" stroke="#404B7C" stroke-width="23" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-2"></path>
+                </svg>
+                
+            <h1 class="h1_loader">Safepass</h1>
+        </div>
+        
     </section>
 
-    <div id="dark" class="dark i_bfixed">
+    <div id="dark" class="dark i_bfixed bvh">
         <label for="dark_mode" class="lab_dark">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon_dark i_dm icon_moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

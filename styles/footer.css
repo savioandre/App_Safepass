@@ -19,7 +19,7 @@ footer {
     gap: 8px;
   }
   
-  .solution.F_n {
+  .solution_.F_n {
     width: max-content;
   }
   
@@ -83,10 +83,6 @@ footer {
   
   [data-theme = "dark"] .svg:hover {
     background: #272833;
-  }
-  
-  img {
-    filter: var(--str);
   }
   
   /* News */

@@ -13,8 +13,8 @@ check.addEventListener('click', () => {
         const mainTwo = `<div>R$ 14,99</div>`
         alterTwo.innerHTML = mainTwo
 
-        month.style.opacity = "1"
-        year.style.opacity = "0.5"
+        month.style.opacity = "0.5"
+        year.style.opacity = "1"
     }
     if (check.checked == true) {
         const alter = document.querySelector('.one_')
@@ -25,8 +25,8 @@ check.addEventListener('click', () => {
         const mainTwo = `<div>R$ 12,99</div>`
         alterTwo.innerHTML = mainTwo
 
-        month.style.opacity = "0.5"
-        year.style.opacity = "1"
+        month.style.opacity = "1"
+        year.style.opacity = "0.5"
 
     }
     return check
@@ -57,11 +57,3 @@ teste.addEventListener('click', () => {
     }
 
 });
-
-// Bar
-const bar = document.querySelector('.inject')
-const nav = document.querySelector('.bar_nav_')
-
-nav.addEventListener('hover', () => {
-    document.querySelector('.inject').classList.add('active_bar')
-})

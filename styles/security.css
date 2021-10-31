@@ -2,8 +2,8 @@
     gap: 32px;
 }
 
-.compu_img img {
-    width: 500px;
+.solutions_box {
+    height: 40vh;
 }
 
 .txt_crp {
@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 48px;
 }
 
@@ -66,3 +67,8 @@
     box-shadow: 0px 0px 32px var(--shadow);
 }
 /* Solutions */
+@media (max-width: 1030px) {
+    .solutions_box {
+        height: 100%;
+    }
+}

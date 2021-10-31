@@ -1,4 +1,11 @@
-// Insert Header
+function loader() {
+    document.querySelector('.loader').classList.add('remove-loader')
+}
+function refresh() {
+    setInterval(loader, 3000);
+}
+refresh()
+
 const header = document.querySelector('#header')
 header.innerHTML = `<nav class="bar_nav_">
     <a href="./index.html" class="logo">
@@ -16,9 +23,11 @@ header.innerHTML = `<nav class="bar_nav_">
 
     </a>
 
+    <h2 class="Saf-dis">Safepass</h2>
+
     <ul class="Bar">
-        <li>
-            <a class="a" href="./">Solutions
+        <li class="sol-opt">
+            <a class="a">Solutions
                 <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
                         stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
@@ -26,8 +35,8 @@ header.innerHTML = `<nav class="bar_nav_">
             </a>
         </li>
 
-        <li>
-            <a class="a" href="">Resources
+        <li class="res-opt">
+            <a class="a">Resources
                 <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
                         stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
@@ -35,8 +44,8 @@ header.innerHTML = `<nav class="bar_nav_">
             </a>
         </li>
 
-        <li>
-            <a class="a" href="">Company
+        <li class="com-opt">
+            <a class="a">Company
                 <svg width="12" height="6" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 1L6.79289 6.29289C7.18342 6.68342 7.81658 6.68342 8.20711 6.29289L13.5 1"
                         stroke="#404B7C" stroke-width="2" stroke-linecap="round" />
@@ -46,28 +55,24 @@ header.innerHTML = `<nav class="bar_nav_">
 
         <li><a class="a" href="./security.html">Security</a></li>
 
-        <li><a class="a" href="/pricing.html">Pricing</a></li>
+        <li><a class="a" href="./pricing.html">Pricing</a></li>
 
         <li><a class="a" href="./about.html">About Us</a></li>
     </ul>
 
     <div class="actions">
-        <a href="/login.html" class="Login">Login</a>
-        <a href="/sign.html" class="Sign ele-sa">Sign In</a>
+        <a href="./login.html" class="Login">Login</a>
+        <a href="./sign.html" class="Sign ele-sa">Sign In</a>
     </div>
 
-    <div class="nav_bar bg_nav" style="opacity: 0; visibility: hidden">
-        <div class="img_logo_nav">
-            <img src="/image/Cloud-Computing.png" width="150px">
-        </div>
-    </div>
+    // <div class="nav_bar bg_nav" style="opacity: 0; visibility: hidden">
+    //     <div class="img_logo_nav">
+    //         <img src="./image/Cloud-Computing.png" width="150px">
+    //     </div>
+    // </div>
 
     <div class="btn_mobile act_m">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-            <circle cx="20" cy="20" r="20" fill="#404B7C" />
-            <path d="M8 16H32" stroke="#E5E5E5" stroke-width="3" stroke-linecap="round" />
-            <path d="M8 24H32" stroke="#E5E5E5" stroke-width="3" stroke-linecap="round" />
-        </svg>
+        <div class="btn_burger"></div>
     </div>
 </nav>`
 
@@ -77,30 +82,148 @@ window.addEventListener('scroll', function (event) {
     if (window.scrollY > 100) {
         document.querySelector('#header')
             .classList.add('testes')
+
+        document.querySelector('.inject')
+            .style.position = "fixed"
     } else {
         document.querySelector('#header')
             .classList.remove('testes', 'anima')
+
+        document.querySelector('.inject')
+            .style.position = "absolute"
     }
 })
 
-// Nav Mobile
-// const btn_mobile = document.querySelector('.btn_mobile')
-// btn_mobile.addEventListener('click', () => {
-//     document.querySelector('.bar_mobile').classList.add('active_bar')
-//     document.querySelector('body').style.overflow = "hidden"
-// })
+function callBar() {
+    openBar()
+}
+
+function openBar() {
+    document.querySelector('.inject')
+        .classList.add('Opt_Bar')
+
+    stayBar()
+}
+
+function stayBar() {
+    const area = document.querySelectorAll('.inject.Opt_Bar')
+    area.forEach((on) => {
+        on.addEventListener('mouseover', () => {
+            document.querySelector('.inject')
+                .classList.add('Opt_Bar')
+        })
+        on.addEventListener('mouseout', () => {
+            document.querySelector('.inject')
+                .classList.remove('Opt_Bar')
+
+            var li = document.querySelectorAll('li')
+                li.forEach((ok) => {
+                    ok.classList.remove('on')
+                })
+        })
+    })
+}
+
+const sh = document.querySelectorAll("header .sol-opt, header .res-opt, header .com-opt")
+sh.forEach((button) => {
+    button.addEventListener("mouseover", (event) => {
+        openBar()
+
+        document.querySelectorAll('.Bar li')
+            .forEach((ky) => {
+                ky.classList.add('off')
+            })
+        button.classList.remove('off')
+        button.classList.add('on')
+    })
+})
+
+const sol = document.querySelector('.sol-opt')
+sol.addEventListener('mouseover', () => {
+    const ul = document.querySelector('.ma_ul')
+    const jd = `
+    <li class="ma_li">
+        <a class="a" href="">Busnisses</a>
+    </li>
+    <li class="ma_li">
+        <a class="a" href="">Cloud</a>
+    </li>
+    <li class="ma_li">
+        <a class="a" href="">Cripto</a>
+    </li>
+    <li class="ma_li">
+        <a class="a" href="">Scan</a>
+    </li>
+    <li class="ma_li">
+        <a class="a" href="">Backup</a>
+    </li>`
+
+    ul.innerHTML = jd
+})
+
+const res = document.querySelector('.res-opt')
+res.addEventListener('mouseover', () => {
+    const ul = document.querySelector('.ma_ul')
+    const jd = `
+    <li class="ma_li">
+        <a class="a" href="">Data Center</a>
+    </li>
+    <li class="ma_li">
+        <a class="a" href="">Cloud</a>
+    </li>
+    <li class="ma_li">
+        <a class="a" href="">Cripto</a>
+    </li>
+`
+
+    ul.innerHTML = jd
+})
+
+const com = document.querySelector('.com-opt')
+com.addEventListener('mouseover', () => {
+    const ul = document.querySelector('.ma_ul')
+    const jd = `
+            <li class="ma_li">
+                <a class="a" href="">dddd</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">Clfffoud</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">eead</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">adad</a>
+            </li>
+            <li class="ma_li">
+                <a class="a" href="">jshsg</a>
+            </li>`
+
+    ul.innerHTML = jd
+})
 
 const btn_mobile = document.querySelector('.btn_mobile')
 btn_mobile.addEventListener('click', () => {
     if (document.querySelector('.btn_mobile.act_m')) {
         document.querySelector('.bar_mobile').classList.add('active_bar')
-        document.querySelector('body').style.overflow = "hidden"
+        document.querySelector('body').style.overflowY = "hidden"
         btn_mobile.classList.remove('act_m')
+
     } else {
         document.querySelector('.bar_mobile').classList.remove('active_bar')
-        document.querySelector('body').style.overflow = "hidden"
+        document.querySelector('body').style.overflowY = "auto"
         btn_mobile.classList.add('act_m')
 
     }
-    
 })
+
+let menuOpen = false;
+btn_mobile.addEventListener('click', () => {
+    if (!menuOpen) {
+        btn_mobile.classList.add('open');
+        menuOpen = true;
+    } else {
+        btn_mobile.classList.remove('open');
+        menuOpen = false;
+    }
+});

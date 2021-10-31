@@ -101,6 +101,10 @@ body {
     font-size: 1.6rem;
   }
 
+  .month {
+    opacity: 0.5;
+  }
+
   .year:checked, .month:checked {
     color: #2A314F;
   }
@@ -327,6 +331,9 @@ button:hover {
   gap: 8px;
 }
 
+.policy {
+  color: var(--type);
+}
 
 .Bu_s {
   background: none;

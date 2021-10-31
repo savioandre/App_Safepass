@@ -26,10 +26,6 @@ body {
     height: 100%;
 }
 
-.form {
-    text-align: center;
-}
-
 /* Logo */
 .header_login {
     display: flex;
@@ -100,10 +96,43 @@ form {
     color: #404B7C;
 
     margin-bottom: 16px;
+    text-align: center;
 }
 
 ::placeholder {
     color: #9AB3DA;
+}
+
+.rd_::placeholder {
+    color: red;
+}
+
+form input {
+    outline: none;
+}
+
+.fas {
+    height: 2px;
+    width: 0px;
+    background: #404B7C;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.bhs {
+    width: 125px;
+} 
+
+.forgot {
+    -webkit-box-pack: start;
+    align-self: flex-start;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+.forgot a {
+    font-size: 1.4rem;
+    color: var(--type);
 }
 
 .h_A {
