@@ -103,9 +103,10 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
-.testes {
+.header_fixed {
     position: fixed;
     top: 0;
+    transition: all 0.3s ease-in-out;
 }
   
   .anima {
@@ -287,7 +288,7 @@ li.on a svg {
     cursor: pointer;
 }
 
-.lu-mode-selec {
+.form_Input button.lu-mode-selec {
     opacity: 80%;
     mix-blend-mode: luminosity;
     cursor: no-drop;
@@ -330,6 +331,33 @@ li.on a svg {
     height: 24px;
 }
 
+.sm_chat {
+    display: flex;
+    align-items: center;
+    margin: 0 0px 0px 12px;
+}
+
+small.sm_chat::before {
+    content: " ";
+    position: absolute;
+    background: #F1F1F1;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    transform: translateX(-12px);
+    animation: 2s infinite normal teste;
+}
+
+@keyframes teste {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
 /* Main */
 .main_chat {
     display: flex;
@@ -359,6 +387,13 @@ li.on a svg {
 
     transition: all 1s ease-in-out;
 } 
+
+.mes_pri_new {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
 
 .res_chat {
     transition: all 1s ease-in-out;

@@ -60,13 +60,14 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
-    color: var(--type);
+    color: var(--blue_dark);
+    font-weight: 700;
 }
 
 /* Input */
 .sw_pri {
-  width: 60px;
-  height: 31px;
+  width: 62px;
+  height: 34px;
   background: rgb(154 179 218 / 33%);
   border-radius: 50px;
   position: relative;
@@ -85,10 +86,10 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translate(3px, -50%);
+  transform: translate(4px, -50%);
   width: 27px;
   height: 27px;
-  background: #2A314F;
+  background: var(--blue_dark);
   border-radius: 50px;
   transition: all 0.4s;
 }

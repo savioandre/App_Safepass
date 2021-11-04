@@ -65,12 +65,6 @@ header.innerHTML = `<nav class="bar_nav_">
         <a href="./sign.html" class="Sign ele-sa">Sign In</a>
     </div>
 
-    // <div class="nav_bar bg_nav" style="opacity: 0; visibility: hidden">
-    //     <div class="img_logo_nav">
-    //         <img src="./image/Cloud-Computing.png" width="150px">
-    //     </div>
-    // </div>
-
     <div class="btn_mobile act_m">
         <div class="btn_burger"></div>
     </div>
@@ -81,13 +75,13 @@ const scroll = document.getElementsByTagName('body')
 window.addEventListener('scroll', function (event) {
     if (window.scrollY > 100) {
         document.querySelector('#header')
-            .classList.add('testes')
+            .classList.add('header_fixed')
 
         document.querySelector('.inject')
             .style.position = "fixed"
     } else {
         document.querySelector('#header')
-            .classList.remove('testes', 'anima')
+            .classList.remove('header_fixed')
 
         document.querySelector('.inject')
             .style.position = "absolute"
@@ -116,10 +110,6 @@ function stayBar() {
             document.querySelector('.inject')
                 .classList.remove('Opt_Bar')
 
-            var li = document.querySelectorAll('li')
-                li.forEach((ok) => {
-                    ok.classList.remove('on')
-                })
         })
     })
 }
@@ -140,6 +130,10 @@ sh.forEach((button) => {
 
 const sol = document.querySelector('.sol-opt')
 sol.addEventListener('mouseover', () => {
+    const h2 = document.querySelector('.head-name')
+    const name = `Solutions`
+    h2.innerHTML = name
+
     const ul = document.querySelector('.ma_ul')
     const jd = `
     <li class="ma_li">
@@ -163,6 +157,10 @@ sol.addEventListener('mouseover', () => {
 
 const res = document.querySelector('.res-opt')
 res.addEventListener('mouseover', () => {
+    const h2 = document.querySelector('.head-name')
+    const name = `Resources`
+    h2.innerHTML = name
+
     const ul = document.querySelector('.ma_ul')
     const jd = `
     <li class="ma_li">
@@ -173,27 +171,30 @@ res.addEventListener('mouseover', () => {
     </li>
     <li class="ma_li">
         <a class="a" href="">Cripto</a>
-    </li>
-`
+    </li>`
 
     ul.innerHTML = jd
 })
 
 const com = document.querySelector('.com-opt')
 com.addEventListener('mouseover', () => {
+    const h2 = document.querySelector('.head-name')
+    const name = `Companys`
+    h2.innerHTML = name
+
     const ul = document.querySelector('.ma_ul')
     const jd = `
             <li class="ma_li">
-                <a class="a" href="">dddd</a>
+                <a class="a" href="">Company's</a>
             </li>
             <li class="ma_li">
-                <a class="a" href="">Clfffoud</a>
+                <a class="a" href="">Manifesto</a>
             </li>
             <li class="ma_li">
-                <a class="a" href="">eead</a>
+                <a class="a" href="./team.html">Team</a>
             </li>
             <li class="ma_li">
-                <a class="a" href="">adad</a>
+                <a class="a" href="">Branding</a>
             </li>
             <li class="ma_li">
                 <a class="a" href="">jshsg</a>
@@ -227,3 +228,13 @@ btn_mobile.addEventListener('click', () => {
         menuOpen = false;
     }
 });
+
+const float = document.querySelectorAll('.man')
+float.forEach((ease) => {
+    ease.addEventListener('mouseover', () => {
+        ease.classList.add('on-float')
+    })
+    ease.addEventListener('mouseout', () => {
+        ease.classList.remove('on-float')
+    })
+})
