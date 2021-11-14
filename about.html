@@ -21,6 +21,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./image/favicon_io/favicon-16x16.png">
     <title>About Safepass</title>
+
+    <script src="https://kit.fontawesome.com/e2fc184072.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -50,7 +52,7 @@
                 <p class="txt_abt">Nenhuma das empresas citadas possui parceria com Safepass, foram usadas meramente como exemplo nesse projeto.</p>
 
                 <p class="txt_abt a">
-                    Acesse <a href="https://github.com/savioandre/App_Safepass" target="_blank">aqui </a>o repositório do projeto no GitHub
+                    Acesse <a href="https://github.com/savioandre/App_Safepass" target="_blank" class="link">aqui </a>o repositório do projeto no GitHub
                 </p>
             </div>
         </div>
@@ -115,6 +117,13 @@
 
             <div class="skill_cont">
                 <h4 class="h4">Skills</h4>
+                <div class="skills">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-github-square"></i>
+                </div>
             </div>
         </main>
         </div>
@@ -171,7 +180,6 @@
     
             </section>
             <div class="social">
-                <h2></h2>
                 <div class="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24"
                         height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -219,8 +227,20 @@
 
             <h1 class="h1_loader">Safepass</h1>
         </div>
+
+        <div id="dark" class="dark i_bfixed bvh">
+            <label for="dark_mode" class="lab_dark">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon_dark i_dm icon_moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                </svg>
+            </label>
+    
+            <input type="checkbox" name="dark_mode" id="dark_mode">
+        </div>
     </section>
     <script src="./main.js"></script>
+    <script src="./dark.js"></script>
 </body>
 
 </html>

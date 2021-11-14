@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    padding: 12px 24px;
 }
 
 .ab_title {
@@ -68,6 +69,8 @@ main {
 .projects {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 48px;
 }
 
@@ -77,19 +80,13 @@ main {
     background: none;
 }
 
-/* .project:hover {
-    background: var(--fill);
-    box-shadow: 0px 0px 32px var(--shadow);
-} */
-
 .txt_foot {
     font-size: 1.4rem;
     font-weight: 500;
-    color: var(--b_);
+    color: var(--blue_ligth);
 }
 
 .man {
-    background: none;
     content: "";
     height: 220px;
     border-radius: 10px 10px 0 0;
@@ -99,16 +96,15 @@ main {
     justify-content: center;
 }
 
-.man:hover {
-    background: var(--blue_dark);
-    box-shadow: 0px 0px 32px var(--shadow);
+.man.saf {
+    background: #d1dced;
 }
 
-.man.net:hover {
+.man.net {
     background: #000;
 }
 
-.zoom:hover {
+.man.zoom {
     background: #5a9beb;
 }
 
@@ -125,6 +121,22 @@ main {
     animation: 4s infinite ease-in-out float;
 }
 
+.skills {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+i.fab {
+    font-size: 4rem;
+    color: #f1f1f1;
+    background: #272833;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 6px;
+}
+
 @keyframes float {
     0%, 100% {transform: translateY(-1px)}
     50% {transform: translateY(20px)}
@@ -133,8 +145,12 @@ main {
 .footer_pro {
     z-index: 2;
     text-align: center;
-    background: var(--blue);
+    background: var(--b_);
     border-radius: 0 0 10px 10px;
     height: 30px;
     padding: 5px 0;
+}
+
+[data-theme ="dark" ] .footer_pro {
+  background: #272833;
 }

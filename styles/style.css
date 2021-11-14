@@ -369,6 +369,7 @@ a.logo {
 .companys {
     align-self: center;
     text-align: center;
+    width: 100%;
 }
 
 .conp_log_title {

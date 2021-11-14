@@ -197,7 +197,7 @@ com.addEventListener('mouseover', () => {
                 <a class="a" href="">Branding</a>
             </li>
             <li class="ma_li">
-                <a class="a" href="">jshsg</a>
+                <a class="a" href="">Blog</a>
             </li>`
 
     ul.innerHTML = jd

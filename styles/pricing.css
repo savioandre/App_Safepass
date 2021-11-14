@@ -33,6 +33,7 @@ body {
 .H_tittle {
   color: var(--b_);
   font-weight: 800;
+  text-align: center;
 }
 
 .H_plan {
@@ -53,6 +54,7 @@ body {
 .p_pri {
   font-size: 1.6rem;
   color: var(--blue_dark);
+  text-align: center;
 }
 
 /* Input cxa */
@@ -181,8 +183,8 @@ body {
 
 .txt_c {
   color: #fff;
-  min-width: 324px;
-  max-width: 324px;
+  min-width: 300px;
+  max-width: 300px;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 16px;

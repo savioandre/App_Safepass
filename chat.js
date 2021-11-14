@@ -14,26 +14,28 @@ const btn = document.querySelector('.btn_sub_input')
 const input = document.querySelector('.m_help')
 
 var reMes
-function userMessage () {
+var area = document.querySelector('.main_chat')
+// Cria a Div 'Message'
+function userMessage() {
     reMes = document.createElement('div')
     reMes.classList.add('message')
 
-    document.querySelector('.main_chat').appendChild(reMes)
-    initMesssage()
+    area.appendChild(reMes)
+    // initMesssage()
 }
+// userMessage()
 
 function initMesssage() {
-btn.addEventListener('click', () => {
-    if (input.value.length <= 0) {
-        input.value.length = " "
-    } else {
-        sendMesssage()
-        // chatMessage()
-    }
-})
+    btn.addEventListener('click', () => {
+        if (input.value.length <= 0) {
+            input.value.length = " "
+        } else {
+            userMessage()
+            sendMesssage()
+        }
+    })
 }
-
-userMessage()
+initMesssage()
 
 function sendMesssage() {
     const mes = document.createElement('p')
@@ -49,7 +51,6 @@ function sendMesssage() {
 
 var createDiv
 function chatMessage() {
-    const area = document.querySelector('.main_chat')
     createDiv = document.createElement('div')
     createDiv.classList.add('chat_m')
 
@@ -93,6 +94,8 @@ const img = document.querySelector('.chat_meet')
 open.addEventListener('click', () => {
     img.style.display = "flex"
     open.style.opacity = 0
+    document.querySelector('.chat')
+        .classList.add('active-chat')
 })
 
 const close = document.querySelector('.close_chat')
@@ -100,14 +103,15 @@ const close = document.querySelector('.close_chat')
 close.addEventListener('click', () => {
     img.style.display = "none"
     open.style.opacity = 1
+    document.querySelector('.chat')
+        .classList.remove('active-chat')
 })
 
 const pricing = document.querySelector('.opt_pri')
-const message = document.querySelector('.message')
 
 pricing.addEventListener('click', () => {
     const newDiv = document.createElement('div')
-    newDiv.classList.add('mes_pri_new')
+    newDiv.classList.add('message')
     const inner = `
         <p class="chat_res">
             <strong>Pricing</strong>
@@ -121,7 +125,7 @@ pricing.addEventListener('click', () => {
 
             <a href="./pricing.html" class="a_pri">Ver planos</a>
         </p>`
-    
+
     newDiv.innerHTML = inner
-    message.appendChild(newDiv)
+    document.querySelector('.main_chat').appendChild(newDiv)
 })

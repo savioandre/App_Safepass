@@ -80,11 +80,13 @@
     right: 10px;
     float: right;
     transform: translateY(-70px);
+    transition: all 0.4s ease-in-out;
 }
 
 .in-link:hover {
     background: hsl(229, 56%, 44%);
-    box-shadow: 0px 0px 0 3px hsl(229, 56%, 44%, 0.3);
+    box-shadow: 0px 0px 0 4px hsl(229, 56%, 44%, 0.4);
+    transition: all 0.4s ease-in-out;
 }
 
 .img_fill img {

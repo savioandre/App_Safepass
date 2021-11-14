@@ -27,6 +27,7 @@
     --type: #404B7C;
     --fill: #fff;
 
+    --inject: #eee;
     --header: #404B7C;
     --footer: #fff;
     --box: #f1f1f1;
@@ -47,6 +48,7 @@
     --box: #283152;
     --footer: #404B7C;
     --txt_opt: #F4F4F4;
+    --inject: #0c0e17;
 
     --fill: #f1f1f1;
     --type: #c9d1d9;
@@ -107,10 +109,12 @@ h1 {
     position: fixed;
     top: 0;
     transition: all 0.3s ease-in-out;
+    background: var(--inject);
+    backdrop-filter: blur(1rem);
 }
   
-  .anima {
-    animation: anima ease-in-out 5s;
+.link {
+    color: var(--blue_spot);
 }
 
 img {
@@ -133,7 +137,7 @@ img {
 /* Header rules Js */
 
 /* Rules Pricing */
-@media (max-width: 1300px) {
+@media (max-width: 1210px) {
     .cards {
         flex-direction: column;
         padding: 24px;
@@ -234,16 +238,17 @@ li.on a svg {
 
 .chat_i {
     cursor: pointer;
-    right: 0;
-    position: absolute;
-    bottom: 0;
+    right: 40px;
+    position: fixed;
+    bottom: 40px;
+    z-index: 1000;
 }
 
 .chat {
     position: fixed;
     right: 40px;
     bottom: 40px;
-    z-index: 1000;
+    z-index: 1;
 }
 /* Chat */
 .chat_meet {
@@ -538,7 +543,7 @@ small.sm_chat::before {
   }
 
 @media (max-width: 490px) {
-    .chat {
+    .active-chat .chat {
         right: 0px;
         width: 100%;
         padding: 0 10%;
