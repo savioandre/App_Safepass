@@ -51,10 +51,14 @@ function sendMesssage() {
 
 var createDiv
 function chatMessage() {
+    const mainOpt = document.createElement('div')
+    mainOpt.classList.add('main_opt')
+
     createDiv = document.createElement('div')
     createDiv.classList.add('chat_m')
 
-    area.appendChild(createDiv)
+    area.appendChild(mainOpt)
+    mainOpt.appendChild(createDiv)
     insertChatMessage()
 }
 
@@ -67,14 +71,34 @@ function insertChatMessage() {
 }
 
 function respondendo() {
-    const p = document.querySelector('.m_help').value
-    var rest = 'Como vai ' + p + '?'
+    const P = document.querySelector('.m_help').value
+    var rest = `To help you ${P}, select one of the options below:`
     const mes = document.createElement('p')
 
     mes.classList.add('chat_mess')
     mes.innerHTML = rest
-    createDiv.appendChild(mes);
+    createDiv.appendChild(mes)
 
+    InsertOptMenuFooter()
+}
+
+const OPT = `
+    <div class="opt_ opt_pri">
+        <p class="opt-btn">Pricing</p>
+    </div>
+    <div class="opt_ opt_prod">
+        <p class="opt-btn">Products</p>
+    </div>
+    <div class="opt_ opt_sol">
+        <p class="opt-btn">Solutions</p>
+    </div>
+`
+function InsertOptMenuFooter() {
+    const REA = document.createElement('div')
+    REA.classList.add('opt_chat')
+    REA.innerHTML = OPT
+    document.querySelector('.main_opt').appendChild(REA)
+    CallName()
 }
 
 form.addEventListener('submit', function (e) {
@@ -88,44 +112,47 @@ document.addEventListener("keypress", function (e) {
     }
 });
 
-const open = document.querySelector('.chat_img')
-const img = document.querySelector('.chat_meet')
+const OPEN = document.querySelector('.chat_img')
+const IMG = document.querySelector('.chat_meet')
 
-open.addEventListener('click', () => {
-    img.style.display = "flex"
-    open.style.opacity = 0
+OPEN.addEventListener('click', () => {
+    IMG.style.display = "flex"
+    OPEN.style.opacity = 0
     document.querySelector('.chat')
         .classList.add('active-chat')
 })
 
-const close = document.querySelector('.close_chat')
+const CLOSE = document.querySelector('.close_chat')
 
-close.addEventListener('click', () => {
-    img.style.display = "none"
-    open.style.opacity = 1
+CLOSE.addEventListener('click', () => {
+    IMG.style.display = "none"
+    OPEN.style.opacity = 1
     document.querySelector('.chat')
         .classList.remove('active-chat')
 })
 
-const pricing = document.querySelector('.opt_pri')
+function CallName() {
+    const PRICING = document.querySelector('.opt_.opt_pri')
 
-pricing.addEventListener('click', () => {
-    const newDiv = document.createElement('div')
-    newDiv.classList.add('message')
-    const inner = `
+    PRICING.addEventListener('click', () => {
+        const NEW_DIV = document.createElement('div')
+        NEW_DIV.classList.add('message')
+
+        const inner = `
         <p class="chat_res">
             <strong>Pricing</strong>
         </p>
 
         <p class="chat_res">
-            Precisa de ajuda para tornar sua emmpresa mais segura?<br>
-            <strong>Conte com a gente!</strong><br>
+            Need help making your business more secure?<br>
+            <strong>Count on us!</strong><br>
 
-            Temos planos flexíveis para todos os tipos de empresas<br>
+            We have flexible plans for all types of companies<br>
 
-            <a href="./pricing.html" class="a_pri">Ver planos</a>
+            <a href="./pricing.html" class="a_pri">See plans</a>
         </p>`
 
-    newDiv.innerHTML = inner
-    document.querySelector('.main_chat').appendChild(newDiv)
-})
+        NEW_DIV.innerHTML = inner
+        document.querySelector('.main_chat').appendChild(NEW_DIV)
+    })
+}

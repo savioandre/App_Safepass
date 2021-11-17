@@ -98,25 +98,26 @@ function openBar() {
 
     stayBar()
 }
-
+var numb = 0
 function stayBar() {
     const area = document.querySelectorAll('.inject.Opt_Bar')
     area.forEach((on) => {
         on.addEventListener('mouseover', () => {
             document.querySelector('.inject')
                 .classList.add('Opt_Bar')
+            numb = 2
         })
         on.addEventListener('mouseout', () => {
             document.querySelector('.inject')
                 .classList.remove('Opt_Bar')
-
+            numb = 1
         })
     })
 }
 
 const sh = document.querySelectorAll("header .sol-opt, header .res-opt, header .com-opt")
 sh.forEach((button) => {
-    button.addEventListener("mouseover", (event) => {
+    button.addEventListener("mouseover", () => {
         openBar()
 
         document.querySelectorAll('.Bar li')
@@ -124,9 +125,23 @@ sh.forEach((button) => {
                 ky.classList.add('off')
             })
         button.classList.remove('off')
-        button.classList.add('on')
     })
 })
+
+
+
+if (numb <= 1) {
+    console.log('ok')
+    sh.forEach((button) => {
+        button.classList.add('on')
+    })
+
+} else if (numb >= 2) {
+    console.log('okk')
+    sh.forEach((button) => {
+        button.classList.remove('on')
+    })
+}
 
 const sol = document.querySelector('.sol-opt')
 sol.addEventListener('mouseover', () => {

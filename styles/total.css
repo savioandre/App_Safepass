@@ -417,6 +417,7 @@ small.sm_chat::before {
     background: #404B7C;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    max-width: 200px;
 }
 
 .chat_res {
@@ -479,15 +480,18 @@ small.sm_chat::before {
 
 .opt_chat {
     display: flex;
-    justify-content: center;
-    gap: 16px;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin: 8px 0 0 38px;
 }
 
-.opt_txt {
+.opt-btn {
     padding: 2px 6px;
     border-radius: 5px;
-    background: var(--box);
-    color: var(--txt_opt);
+    background: var(--blue_dark);
+    color: #fff;
     font-size: 1rem;
     letter-spacing: 0.5px;
     cursor: pointer;
